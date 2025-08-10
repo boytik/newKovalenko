@@ -38,11 +38,9 @@ class SpeedFillView: UIView {
         ]
         layer.addSublayer(gradientLayer)
         
-        // Маска для прогресса
         fillLayer.fillColor = UIColor.black.cgColor
         gradientLayer.mask = fillLayer
         
-        // Слой рисок
         ticksLayer.fillColor = UIColor.clear.cgColor
         layer.addSublayer(ticksLayer)
     }

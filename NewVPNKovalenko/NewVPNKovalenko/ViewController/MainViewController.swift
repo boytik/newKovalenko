@@ -17,23 +17,18 @@ final class MainViewController: UIViewController {
         mainView.serversButton.addTarget(self, action: #selector(goToServers), for: .touchUpInside)
         mainView.startButton.addTarget(self, action: #selector(toggleVPN), for: .touchUpInside)
 
-        // AutoConnect switch (если у твоего AutoConnectSwitch есть .isOn и .valueChanged)
         mainView.autoConnectSwitch.isOn = AppEnv.isAutoConnectEnabled
         mainView.autoConnectSwitch.addTarget(self, action: #selector(autoConnectChanged(_:)), for: .valueChanged)
 
-        // Наблюдение статуса VPN
         statusObserver = VPNManager.shared.observeStatus { [weak self] status in
             self?.applyStatus(status)
         }
 
-        // Изначально отрисуем состояние
         applyStatus(VPNManager.shared.status)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        // Автостарт, если включено и есть конфиг
         if AppEnv.isAutoConnectEnabled, AppEnv.hasXrayConfig {
             connectIfNeeded()
         }
@@ -74,7 +69,6 @@ final class MainViewController: UIViewController {
     }
 
     @objc private func autoConnectChanged(_ sender: UIControl) {
-        // если у твоего свитча нет isOn – поправь под его API
         let on = (sender as? UISwitch)?.isOn ?? AppEnv.isAutoConnectEnabled
         AppEnv.isAutoConnectEnabled = on
         if on { connectIfNeeded() }

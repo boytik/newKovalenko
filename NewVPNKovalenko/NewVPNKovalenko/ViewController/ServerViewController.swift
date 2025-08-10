@@ -16,7 +16,7 @@ final class ServersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true // убирает стандартную кнопку
+        self.navigationItem.hidesBackButton = true
         
         mainView.backgroundColor = UIColor(named: "bg")
         mainView.tableView.register(ServerInfoCell.self, forCellReuseIdentifier: "ServerInfoCell")
