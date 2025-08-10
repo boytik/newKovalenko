@@ -20,6 +20,12 @@
         </dict>
     </dict>
 
+    <!-- ✅ Разрешаем открывать Telegram и https-ссылки -->
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>tg</string>
+    </array>
+
     <!-- ✅ Добавляем шрифты -->
     <key>UIAppFonts</key>
     <array>
@@ -28,4 +34,5 @@
     </array>
 </dict>
 </plist>
+
 

@@ -99,7 +99,7 @@ final class SettingsView: UIView {
         button.setBackgroundImage(UIImage(named: "Slot"), for: .normal)
         
         // Текст
-        button.setTitle("Get the key", for: .normal)
+        button.setTitle("Kovalenko Bot", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         button.tintColor = .clear

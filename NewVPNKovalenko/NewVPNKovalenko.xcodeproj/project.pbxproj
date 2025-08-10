@@ -12,6 +12,15 @@
 		3E3606422E391BBC00863949 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3606412E391BBC00863949 /* Switcher.swift */; };
 		3E3606492E39414100863949 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E3606482E39414100863949 /* Rubik-Regular.ttf */; };
 		3E36064B2E3941DB00863949 /* SegoeUI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E36064A2E3941DB00863949 /* SegoeUI.ttf */; };
+		3E6224C62E48E771003073C6 /* AppEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6224C52E48E771003073C6 /* AppEnv.swift */; };
+		3E6224C82E48EB04003073C6 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6224C72E48EB04003073C6 /* VPNManager.swift */; };
+		3E6224E32E48F861003073C6 /* KovalenkoPacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3E6224D92E48F861003073C6 /* KovalenkoPacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3E6224EB2E48FC00003073C6 /* XRayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6224CE2E48F3B1003073C6 /* XRayEngine.swift */; };
+		3E6224EC2E48FC34003073C6 /* XrayBridge.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6224C92E48F2CA003073C6 /* XrayBridge.xcframework */; };
+		3E6224ED2E48FC34003073C6 /* XrayBridge.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6224C92E48F2CA003073C6 /* XrayBridge.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E6224EF2E48FC3A003073C6 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6224DA2E48F861003073C6 /* NetworkExtension.framework */; };
+		3E6224F02E48FC3A003073C6 /* NetworkExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6224DA2E48F861003073C6 /* NetworkExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E6224F12E48FC51003073C6 /* AppEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6224C52E48E771003073C6 /* AppEnv.swift */; };
 		3EAC3D232E37ADB000B6CB95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC3D1C2E37ADB000B6CB95 /* Assets.xcassets */; };
 		3EAC3D252E37ADB000B6CB95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC3D1F2E37ADB000B6CB95 /* LaunchScreen.storyboard */; };
 		3EAC3D262E37ADB000B6CB95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC3D1B2E37ADB000B6CB95 /* AppDelegate.swift */; };
@@ -22,10 +31,55 @@
 		3EAC3D332E37BE9E00B6CB95 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC3D322E37BE9E00B6CB95 /* MainView.swift */; };
 		3EAC3D352E37C18700B6CB95 /* ServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC3D342E37C18700B6CB95 /* ServerViewController.swift */; };
 		3EAC3D372E37C51900B6CB95 /* ServerInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC3D362E37C51900B6CB95 /* ServerInfoCell.swift */; };
-		3EAC3D3B2E37C5A800B6CB95 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC3D382E37C5A800B6CB95 /* PacketTunnelProvider.swift */; };
 		3EAC3D3C2E37C5A800B6CB95 /* VLESSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC3D392E37C5A800B6CB95 /* VLESSService.swift */; };
 		3EAC3D3E2E37C62100B6CB95 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC3D3D2E37C62100B6CB95 /* ServerModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E6224E12E48F861003073C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EAC3CFB2E37AD8300B6CB95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E6224D82E48F861003073C6;
+			remoteInfo = KovalenkoPacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E6224D32E48F6F3003073C6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E6224E42E48F861003073C6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3E6224E32E48F861003073C6 /* KovalenkoPacketTunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E6224EE2E48FC34003073C6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3E6224ED2E48FC34003073C6 /* XrayBridge.xcframework in Embed Frameworks */,
+				3E6224F02E48FC3A003073C6 /* NetworkExtension.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3E36063C2E38C3E000863949 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +87,13 @@
 		3E3606412E391BBC00863949 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		3E3606482E39414100863949 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		3E36064A2E3941DB00863949 /* SegoeUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SegoeUI.ttf; sourceTree = "<group>"; };
+		3E6224C42E48E66D003073C6 /* NewVPNKovalenko.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NewVPNKovalenko.entitlements; sourceTree = "<group>"; };
+		3E6224C52E48E771003073C6 /* AppEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnv.swift; sourceTree = "<group>"; };
+		3E6224C72E48EB04003073C6 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		3E6224C92E48F2CA003073C6 /* XrayBridge.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = XrayBridge.xcframework; sourceTree = "<group>"; };
+		3E6224CE2E48F3B1003073C6 /* XRayEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XRayEngine.swift; sourceTree = "<group>"; };
+		3E6224D92E48F861003073C6 /* KovalenkoPacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KovalenkoPacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6224DA2E48F861003073C6 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		3EAC3D032E37AD8300B6CB95 /* NewVPNKovalenko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewVPNKovalenko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAC3D1B2E37ADB000B6CB95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EAC3D1C2E37ADB000B6CB95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,12 +106,41 @@
 		3EAC3D322E37BE9E00B6CB95 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3EAC3D342E37C18700B6CB95 /* ServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewController.swift; sourceTree = "<group>"; };
 		3EAC3D362E37C51900B6CB95 /* ServerInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfoCell.swift; sourceTree = "<group>"; };
-		3EAC3D382E37C5A800B6CB95 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		3EAC3D392E37C5A800B6CB95 /* VLESSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLESSService.swift; sourceTree = "<group>"; };
 		3EAC3D3D2E37C62100B6CB95 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3E6224E72E48F861003073C6 /* Exceptions for "KovalenkoPacketTunnel" folder in "KovalenkoPacketTunnel" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3E6224D82E48F861003073C6 /* KovalenkoPacketTunnel */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3E6224DC2E48F861003073C6 /* KovalenkoPacketTunnel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3E6224E72E48F861003073C6 /* Exceptions for "KovalenkoPacketTunnel" folder in "KovalenkoPacketTunnel" target */,
+			);
+			path = KovalenkoPacketTunnel;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		3E6224D62E48F861003073C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E6224EC2E48FC34003073C6 /* XrayBridge.xcframework in Frameworks */,
+				3E6224EF2E48FC3A003073C6 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EAC3D002E37AD8300B6CB95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,10 +170,21 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		3E6224D02E48F6F3003073C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E6224C92E48F2CA003073C6 /* XrayBridge.xcframework */,
+				3E6224DA2E48F861003073C6 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3EAC3CFA2E37AD8300B6CB95 = {
 			isa = PBXGroup;
 			children = (
 				3EAC3D222E37ADB000B6CB95 /* NewVPNKovalenko */,
+				3E6224DC2E48F861003073C6 /* KovalenkoPacketTunnel */,
+				3E6224D02E48F6F3003073C6 /* Frameworks */,
 				3EAC3D042E37AD8300B6CB95 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3EAC3D032E37AD8300B6CB95 /* NewVPNKovalenko.app */,
+				3E6224D92E48F861003073C6 /* KovalenkoPacketTunnel.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +201,7 @@
 		3EAC3D222E37ADB000B6CB95 /* NewVPNKovalenko */ = {
 			isa = PBXGroup;
 			children = (
+				3E6224C42E48E66D003073C6 /* NewVPNKovalenko.entitlements */,
 				3EAC3D2B2E37ADC400B6CB95 /* Views */,
 				3EAC3D2A2E37ADBD00B6CB95 /* ViewController */,
 				3EAC3D292E37ADB400B6CB95 /* Support */,
@@ -144,9 +247,11 @@
 		3EAC3D3A2E37C5A800B6CB95 /* VpnService */ = {
 			isa = PBXGroup;
 			children = (
-				3EAC3D382E37C5A800B6CB95 /* PacketTunnelProvider.swift */,
 				3EAC3D392E37C5A800B6CB95 /* VLESSService.swift */,
 				3EAC3D3D2E37C62100B6CB95 /* ServerModel.swift */,
+				3E6224C52E48E771003073C6 /* AppEnv.swift */,
+				3E6224C72E48EB04003073C6 /* VPNManager.swift */,
+				3E6224CE2E48F3B1003073C6 /* XRayEngine.swift */,
 			);
 			path = VpnService;
 			sourceTree = "<group>";
@@ -154,6 +259,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3E6224D82E48F861003073C6 /* KovalenkoPacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E6224E82E48F861003073C6 /* Build configuration list for PBXNativeTarget "KovalenkoPacketTunnel" */;
+			buildPhases = (
+				3E6224D52E48F861003073C6 /* Sources */,
+				3E6224D62E48F861003073C6 /* Frameworks */,
+				3E6224D72E48F861003073C6 /* Resources */,
+				3E6224EE2E48FC34003073C6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3E6224DC2E48F861003073C6 /* KovalenkoPacketTunnel */,
+			);
+			name = KovalenkoPacketTunnel;
+			packageProductDependencies = (
+			);
+			productName = KovalenkoPacketTunnel;
+			productReference = 3E6224D92E48F861003073C6 /* KovalenkoPacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3EAC3D022E37AD8300B6CB95 /* NewVPNKovalenko */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EAC3D162E37AD8400B6CB95 /* Build configuration list for PBXNativeTarget "NewVPNKovalenko" */;
@@ -161,10 +289,13 @@
 				3EAC3CFF2E37AD8300B6CB95 /* Sources */,
 				3EAC3D002E37AD8300B6CB95 /* Frameworks */,
 				3EAC3D012E37AD8300B6CB95 /* Resources */,
+				3E6224D32E48F6F3003073C6 /* Embed Frameworks */,
+				3E6224E42E48F861003073C6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3E6224E22E48F861003073C6 /* PBXTargetDependency */,
 			);
 			name = NewVPNKovalenko;
 			packageProductDependencies = (
@@ -183,6 +314,9 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					3E6224D82E48F861003073C6 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					3EAC3D022E37AD8300B6CB95 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -203,11 +337,19 @@
 			projectRoot = "";
 			targets = (
 				3EAC3D022E37AD8300B6CB95 /* NewVPNKovalenko */,
+				3E6224D82E48F861003073C6 /* KovalenkoPacketTunnel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3E6224D72E48F861003073C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EAC3D012E37AD8300B6CB95 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +364,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3E6224D52E48F861003073C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E6224EB2E48FC00003073C6 /* XRayEngine.swift in Sources */,
+				3E6224F12E48FC51003073C6 /* AppEnv.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EAC3CFF2E37AD8300B6CB95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,9 +383,10 @@
 				3E36063D2E38C3E000863949 /* MainViewController.swift in Sources */,
 				3E3606422E391BBC00863949 /* Switcher.swift in Sources */,
 				3EAC3D332E37BE9E00B6CB95 /* MainView.swift in Sources */,
-				3EAC3D3B2E37C5A800B6CB95 /* PacketTunnelProvider.swift in Sources */,
 				3EAC3D3C2E37C5A800B6CB95 /* VLESSService.swift in Sources */,
+				3E6224C62E48E771003073C6 /* AppEnv.swift in Sources */,
 				3EAC3D2D2E37AEB400B6CB95 /* SettingsView.swift in Sources */,
+				3E6224C82E48EB04003073C6 /* VPNManager.swift in Sources */,
 				3EAC3D352E37C18700B6CB95 /* ServerViewController.swift in Sources */,
 				3EAC3D312E37BE9300B6CB95 /* ServersView.swift in Sources */,
 				3EAC3D272E37ADB000B6CB95 /* SceneDelegate.swift in Sources */,
@@ -244,6 +396,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E6224E22E48F861003073C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E6224D82E48F861003073C6 /* KovalenkoPacketTunnel */;
+			targetProxy = 3E6224E12E48F861003073C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3EAC3D1F2E37ADB000B6CB95 /* LaunchScreen.storyboard */ = {
@@ -257,11 +417,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3E6224E52E48F861003073C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KovalenkoPacketTunnel/KovalenkoPacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WBSBWSNWN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KovalenkoPacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KovalenkoPacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Boytik.NewVPNKovalenko.KovalenkoPacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E6224E62E48F861003073C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KovalenkoPacketTunnel/KovalenkoPacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WBSBWSNWN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KovalenkoPacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KovalenkoPacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Boytik.NewVPNKovalenko.KovalenkoPacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3EAC3D172E37AD8400B6CB95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NewVPNKovalenko/NewVPNKovalenko.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6WBSBWSNWN;
@@ -290,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NewVPNKovalenko/NewVPNKovalenko.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6WBSBWSNWN;
@@ -437,6 +651,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3E6224E82E48F861003073C6 /* Build configuration list for PBXNativeTarget "KovalenkoPacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E6224E52E48F861003073C6 /* Debug */,
+				3E6224E62E48F861003073C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3EAC3CFE2E37AD8300B6CB95 /* Build configuration list for PBXProject "NewVPNKovalenko" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

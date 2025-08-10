@@ -15,26 +15,22 @@ struct VLESSConfig: Codable {
 }
 
 final class VLESSService {
-    
     static let shared = VLESSService()
     private init() {}
-    
-    // MARK: - Парсинг ссылки
-    
+
     func parse(link: String) -> VLESSConfig? {
         guard let url = URL(string: link.replacingOccurrences(of: "vless://", with: "https://")) else {
             return nil
         }
-        
         let uuid = url.user ?? ""
         let address = url.host ?? ""
         let port = url.port ?? 443
-        
+
         let queryItems = URLComponents(string: link.replacingOccurrences(of: "vless://", with: "https://"))?.queryItems
         func get(_ name: String) -> String {
-            return queryItems?.first(where: { $0.name == name })?.value ?? ""
+            queryItems?.first(where: { $0.name == name })?.value ?? ""
         }
-        
+
         return VLESSConfig(
             address: address,
             port: port,
@@ -47,9 +43,9 @@ final class VLESSService {
             spx: get("spx")
         )
     }
-    
+
     func generateXrayConfig(from config: VLESSConfig) -> [String: Any] {
-        return [
+        [
             "inbounds": [],
             "outbounds": [[
                 "protocol": "vless",
@@ -76,23 +72,14 @@ final class VLESSService {
             ]]
         ]
     }
-    
-    func saveConfigToAppGroup(json: [String: Any],
-                              filename: String = "xray_config.json") -> URL? {
-        guard let containerURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.YOUR_APP_GROUP_ID") else {
-            return nil
-        }
 
-        let fileURL = containerURL.appendingPathComponent(filename)
-
+    @discardableResult
+    func saveConfigToAppGroup(json: [String: Any], filename: String = "xray_config.json") -> URL? {
+        let fileURL = AppEnv.containerURL.appendingPathComponent(filename)
         do {
-            // Удалить старый файл, если он есть
             if FileManager.default.fileExists(atPath: fileURL.path) {
                 try FileManager.default.removeItem(at: fileURL)
             }
-
-            // Записать новый конфиг
             let data = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
             try data.write(to: fileURL)
             return fileURL
@@ -101,5 +88,5 @@ final class VLESSService {
             return nil
         }
     }
-
 }
+

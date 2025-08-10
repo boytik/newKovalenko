@@ -52,19 +52,14 @@ final class ServerInfoCell: UITableViewCell {
             signalStackView.addArrangedSubview(bar)
         }
         
-        // Основной стек
         mainStack.axis = .horizontal
         mainStack.alignment = .center
         mainStack.distribution = .fill
         mainStack.spacing = 8
         mainStack.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Вложим элементы
         mainStack.addArrangedSubview(flagImageView)
         mainStack.addArrangedSubview(ipLabel)
         mainStack.addArrangedSubview(signalStackView)
-        
-        // Чтобы сигнал занял 15% ширины стека
         signalStackView.widthAnchor.constraint(equalTo: mainStack.widthAnchor, multiplier: 0.1).isActive = true
         
         contentView.addSubview(containerView)

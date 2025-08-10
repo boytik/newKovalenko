@@ -1,8 +1,6 @@
 
 import UIKit
 
-
-
 class MainView: UIView {
     
     // MARK: - Views

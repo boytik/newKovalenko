@@ -4,7 +4,7 @@ import UIKit
 
 class AutoConnectSwitch: UIButton {
     
-    private var isOn = false
+    var isOn = false
     
     private let onBackground = UIImage(named: "PickerOn")
     private let offBackground = UIImage(named: "PickerOff")

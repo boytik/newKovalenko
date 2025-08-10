@@ -89,16 +89,14 @@ class SpeedFillView: UIView {
         
         let tickLengthInner: CGFloat = radius * 0.2
         let fontSize: CGFloat = radius * 0.14
-        let baseTextRadius: CGFloat = radius + fontSize * 0.9 // Увеличен радиус для текста, чтобы цифры не прилипали
+        let baseTextRadius: CGFloat = radius + fontSize * 0.9
         
-        // 0–30 шаг 5, 40–80 шаг 10
         let values: [CGFloat] = Array(stride(from: 0, through: 30, by: 5)) +
                                 Array(stride(from: 40, through: 80, by: 10))
         
         for (index, value) in values.enumerated() {
             let angle = startAngle + (CGFloat(index) / CGFloat(values.count - 1)) * totalAngle
             
-            // Риски
             let tickLayer = CAShapeLayer()
             let tickPath = UIBezierPath()
             tickPath.move(to: CGPoint(x: center.x + cos(angle) * (radius - tickLengthInner),
@@ -109,8 +107,7 @@ class SpeedFillView: UIView {
             tickLayer.strokeColor = UIColor.orange.cgColor
             tickLayer.lineWidth = max(2, radius * 0.012)
             ticksLayer.addSublayer(tickLayer)
-            
-            // Цифры
+
             let textLayer = CATextLayer()
             textLayer.string = "\(Int(value))"
             textLayer.font = "SegoeUI" as CFTypeRef
@@ -119,7 +116,6 @@ class SpeedFillView: UIView {
             textLayer.alignmentMode = .center
             textLayer.contentsScale = UIScreen.main.scale
             
-            // Позиционирование текста
             let textRadius = baseTextRadius
             let textX = center.x + cos(angle) * textRadius
             let textY = center.y + sin(angle) * textRadius

@@ -1,0 +1,8 @@
+framework module "XrayBridge" {
+	header "ref.h"
+    header "Xraybridge.objc.h"
+    header "Universe.objc.h"
+    header "XrayBridge.h"
+
+    export *
+}
